@@ -10,13 +10,14 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var dice = [Image("Dice1"),
+    var dice = [
+                Image("Dice1"),
                 Image("Dice2"),
                 Image("Dice3"),
                 Image("Dice4"),
                 Image("Dice5"),
                 Image("Dice6"),
-       ]
+            ]
         
     @State var dice1 =  Image("Dice3")
     @State var dice2 =  Image("Dice5")
@@ -49,7 +50,7 @@ struct ContentView: View {
         
     }
     func randomDiceNumber () -> Image{
-        let arr = [Image("Dice1"), Image("Dice2"), Image("Dice3"), Image("Dice4"), Image("Dice5"), Image("Dice6")]
+        let arr = dice
         return arr.randomElement()!
 
     }
